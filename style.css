@@ -1,6 +1,6 @@
 body
 {
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Lato', sans-serif;
     margin: 0;
     background: whitesmoke;
@@ -55,7 +55,7 @@ body
 
 .container
 {
-    width: 80%;
+    width: 70%;
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -63,7 +63,6 @@ body
 .article
 {
     width: 70%;
-    height: 700px;
     border: 2px solid black;
     background: white;
 }
@@ -92,15 +91,61 @@ body
    line-height: 1;
 }
 
-/*.image
+.image
 {
-    width: 100%;
-    height: 3px;
+    text-align: center;
 }
-*/
 .sidebar
 {
     width: 25%;
     height: 700px;
     border: 2px solid black;
 }
+
+.text
+{
+    text-align: left;
+    width: 90%;
+    margin: 20px auto;
+    font-weight: 400;
+}
+
+.readMore
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    width: 20%;
+    margin: 0 auto;
+    font-size: 20px;
+    height: 40px;
+    transition: background 0.2s ease-in-out;
+    
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.readMore:hover
+{
+   background: #404040;;
+}
+
+article > footer
+{
+    display: flex;
+    justify-content: space-between;
+    color: grey;
+    margin: 40px;
+}
+
+article > footer > a
+{
+    color: grey;
+}
+
+article > footer > a:hover
