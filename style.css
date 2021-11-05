@@ -3,7 +3,7 @@ body
     font-size: 18px;
     font-family: 'Lato', sans-serif;
     margin: 0;
-    background: whitesmoke;
+    background: #f3f3f3;
 }
 
 .navbar
@@ -13,7 +13,7 @@ body
     color: white;
     display: flex;
     border-top: 1px solid gray;
-   justify-content: center;
+    justify-content: center;
 }
 
 .navitem
@@ -44,7 +44,6 @@ body
 {
     font-size: 90px;
     text-align: center;
-    
 }
 
 .logo > h1 > img
@@ -59,11 +58,11 @@ body
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    align-items: flex-start;
 }
 .article
 {
     width: 70%;
-    border: 2px solid black;
     background: white;
 }
 
@@ -74,16 +73,17 @@ body
 
 .articleheader > h1
 {
-    font-size: 48px;
+    margin-top: 50px;
+    font-size: 42px;
     font-family: sans-serif;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 2px;
 }
 
 .articleheader > h2
 {
-    font-size: .9375em;
+    font-size: 15px;
     color: gray;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -93,19 +93,18 @@ body
 
 .image
 {
-    text-align: center;
+    margin: 0 auto;
+    width: 85%;
+    height: 60vh;
+    background: center no-repeat;
+    background-size: cover;
 }
-.sidebar
-{
-    width: 25%;
-    height: 700px;
-    border: 2px solid black;
-}
+
 
 .text
 {
     text-align: left;
-    width: 90%;
+    width: 85%;
     margin: 20px auto;
     font-weight: 400;
 }
@@ -135,7 +134,7 @@ a
    background: #404040;;
 }
 
-article > footer
+article > section
 {
     display: flex;
     justify-content: space-between;
@@ -143,9 +142,58 @@ article > footer
     margin: 40px;
 }
 
-article > footer > a
+article > section > div > a
 {
     color: grey;
+    transition: color 0.2s;
 }
 
-article > footer > a:hover
+article > section > div > a:hover
+{
+    color: black;
+}
+
+/* ---------------------------------- Sidebar Section ------------------------------- */ 
+
+.sidebar
+{
+    margin-left: 50px;
+    font-size: 17px;
+    background: white;
+    width: 25%;
+    
+}
+
+.tile
+{
+    
+}
+
+.blackbar
+{
+    display: flex;
+    color: white;
+    background: black;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.authorimg
+{
+    background: center no-repeat;
+    background-size: cover;
+    width: 85%;
+    height: 25vh;
+    margin: 0 auto;
+    margin: 20px auto;
+}
+
+aside > .text
+{
+    text-align: center;
+    color: gray;
+    margin: 30px auto;
+}
