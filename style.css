@@ -13,7 +13,7 @@ body
     color: white;
     display: flex;
     border-top: 1px solid gray;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .navitem
@@ -26,10 +26,16 @@ body
     padding: 20px;
 }
 
+.button> a:hover
+{
+    color:gray;
+}
+
 .button > a
 {
     text-decoration: none;
     color: white;
+    transition: color 0.2s;
 }
 
 .logo
@@ -135,11 +141,13 @@ article
 a
 {
     text-decoration: none;
+    color: black;
+    transition: color 0.2s;
 }
 
 .readMore:hover
 {
-   background: #404040;;
+   background: #404040;
 }
 
 article > section
@@ -272,10 +280,26 @@ article > section > div > a:hover
    padding: 0;
 }
 
-.tile > ul > li
+.tile > ul > a > li
 {
     list-style-type: none;
-   padding: 0 0 10px 20px;
+   padding: 10px 0 10px 20px;
+   border-bottom: 1px solid lightgray;
+}
+
+.tile > ul > a:hover
+{
+   color: gray;
+}
+
+.tile > ul > li:first-child
+{
+ padding: 0 0 10px 20px;
+}
+
+.tile > ul > li:last-child
+{
+    border: none;
 }
 
 /* -------------------------footer------------------------- */
