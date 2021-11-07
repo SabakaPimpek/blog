@@ -1,4 +1,7 @@
 
 .icon-twitter:before { content: '\f099'; } /* '' */
+.icon-gplus:before { content: '\f0d5'; } /* '' */
 .icon-instagram:before { content: '\f16d'; } /* '' */
+.icon-snapchat-ghost:before { content: '\f2ac'; } /* '' */
 .icon-facebook-squared:before { content: '\f308'; } /* '' */
+.icon-youtube:before { content: '\f315'; } /* '' */

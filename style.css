@@ -3,7 +3,7 @@ body
     font-size: 18px;
     font-family: 'Lato', sans-serif;
     margin: 0;
-    background: #f3f3f3;
+    background: whitesmoke;
 }
 
 .navbar
@@ -63,7 +63,13 @@ body
 .article
 {
     width: 70%;
+}
+
+article
+{
     background: white;
+    margin-bottom: 40px;
+
 }
 
 .articleheader
@@ -73,7 +79,8 @@ body
 
 .articleheader > h1
 {
-    margin-top: 50px;
+    margin: 0;
+    padding: 40px;
     font-size: 42px;
     font-family: sans-serif;
     text-transform: uppercase;
@@ -88,7 +95,7 @@ body
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 400;
-   line-height: 1;
+    line-height: 1;
 }
 
 .image
@@ -107,6 +114,7 @@ body
     width: 85%;
     margin: 20px auto;
     font-weight: 400;
+    padding-bottom: 10px;
 }
 
 .readMore
@@ -114,7 +122,7 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    background: black;
+    background: #202020;
     color: white;
     width: 20%;
     margin: 0 auto;
@@ -139,7 +147,7 @@ article > section
     display: flex;
     justify-content: space-between;
     color: grey;
-    margin: 40px;
+    padding: 40px;
 }
 
 article > section > div > a
@@ -159,21 +167,19 @@ article > section > div > a:hover
 {
     margin-left: 50px;
     font-size: 17px;
-    background: white;
     width: 25%;
-    
 }
 
 .tile
 {
-    
+    background: white;
+    margin-bottom: 40px;
 }
-
 .blackbar
 {
     display: flex;
     color: white;
-    background: black;
+    background: #202020;
     height: 45px;
     justify-content: center;
     align-items: center;
@@ -186,14 +192,157 @@ article > section > div > a:hover
     background: center no-repeat;
     background-size: cover;
     width: 85%;
-    height: 25vh;
-    margin: 0 auto;
+    aspect-ratio: 1;
     margin: 20px auto;
 }
 
-aside > .text
+.grid
+{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
+    padding: 25px;
+    gap: 5px;
+}
+
+.grid > a
+{
+    color:gray;
+}
+
+.griditem
+{
+    font-size: 15px;
+    border: 1px solid lightgray;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: color 0.2s;
+}
+
+.griditem:hover 
+{
+    color: black;
+}
+
+.griditem > i
+{
+    display: block;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.newbar
+{
+    margin-top: 5px;
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+    font-size: 14px;
+    color: grey;
+}
+
+.newbar:last-child
+{
+    border: none;
+}
+
+.newimg
+{
+    width: 25%;
+    aspect-ratio: 1;
+    background-size: cover;
+    border-radius: 1px;
+    height: 30%;
+    margin: auto 30px 0 0;
+}
+
+.newbar > div > header > h3
+{
+    margin-top: 0;
+    font-size: 17px;
+    color: black;
+}
+
+.tile > ul
+{
+   font-size: 17px;
+   padding: 0;
+}
+
+.tile > ul > li
+{
+    list-style-type: none;
+   padding: 0 0 10px 20px;
+}
+
+/* -------------------------footer------------------------- */
+
+footer
 {
     text-align: center;
-    color: gray;
-    margin: 30px auto;
+    background: #202020;
+    color: white;
+    padding: 20px;
+}
+
+/* ------------------media query------- */
+
+@media screen and (max-width: 1500px)
+{
+    .container
+    {
+        width: 90%;
+    }
+
+    .newimg
+    {
+        width: 20%;
+        height: 30%;
+    }
+}
+
+@media screen and (max-width: 1150px)
+{
+    .grid
+    {
+        padding: 5px;
+    }
+
+    .sidebar
+    {
+        width: 30%;
+    }
+
+    .newimg
+    {
+        margin: 0;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 900px)
+{
+    .sidebar
+    {
+        display: none;
+    }
+
+    .article
+    {
+        width: 100%;
+    }
+
+    .readMore
+    {
+        width: 40%;
+    }
+
+    .image
+    {
+        height: 50vh;
+    }
+
 }
