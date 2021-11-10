@@ -6,14 +6,87 @@ body
     background: whitesmoke;
 }
 
+img
+{
+    display: block;
+}
+
+:root
+{
+    --darkTheme: #202020;
+    --white: #FFF;
+}
+
 .navbar
 {
     width: 100%;
-    background: #202020;
-    color: white;
+    background: var(--darkTheme);
+    color: var(--white);
     display: flex;
     border-top: 1px solid gray;
     justify-content: space-around;
+}
+
+.hamburger
+{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburgerBTN
+{
+    width: 38px;
+    height: 5px;
+    border-radius: 2px;
+    background: var(--white);
+    position: absolute;
+    transition: background .5s ease-in-out;
+}
+
+.hamburgerBTN::before,
+.hamburgerBTN::after
+{
+    content: '';
+    width: 38px;
+    height: 5px;
+    border-radius: 2px;
+    background: var(--white);
+    position: absolute;
+    transition: transform .5s ease-in-out;
+}
+
+/* HAMBURGER ANIMATION ------------------------------------------------ */
+.hamburger.open .hamburgerBTN::before
+{
+    transform: rotate(45deg);
+}
+
+.hamburger.open .hamburgerBTN::after
+{
+    transform: rotate(-45deg);
+    
+}
+
+.hamburger.open .hamburgerBTN
+{
+    background: none;
+}
+
+/* HAMBURGER ANIMATION  ---------------------------------------------- */
+.hamburgerBTN::before
+{
+    transform: translateY(-12px);
+}
+
+.hamburgerBTN::after
+{
+    transform: translateY(12px);
 }
 
 .navitem
@@ -34,7 +107,7 @@ body
 .button > a
 {
     text-decoration: none;
-    color: white;
+    color: var(--white);
     transition: color 0.2s;
 }
 
@@ -50,12 +123,14 @@ body
 {
     font-size: 90px;
     text-align: center;
+    
 }
 
 .logo > h1 > img
 {
     border-radius: 50%;
     margin-right: 20px;
+    display: inline;
 }
 
 .container
@@ -73,7 +148,7 @@ body
 
 article
 {
-    background: white;
+    background: var(--white);
     margin-bottom: 40px;
 
 }
@@ -128,8 +203,8 @@ article
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #202020;
-    color: white;
+    background: var(--darkTheme);
+    color: var(--white);
     width: 20%;
     margin: 0 auto;
     font-size: 20px;
@@ -180,14 +255,14 @@ article > section > div > a:hover
 
 .tile
 {
-    background: white;
+    background: var(--white);
     margin-bottom: 40px;
 }
 .blackbar
 {
     display: flex;
-    color: white;
-    background: #202020;
+    color: var(--white);
+    background: var(--darkTheme);
     height: 45px;
     justify-content: center;
     align-items: center;
@@ -197,10 +272,7 @@ article > section > div > a:hover
 
 .authorimg
 {
-    background: center no-repeat;
-    background-size: cover;
     width: 85%;
-    aspect-ratio: 1;
     margin: 20px auto;
 }
 
@@ -307,8 +379,8 @@ article > section > div > a:hover
 footer
 {
     text-align: center;
-    background: #202020;
-    color: white;
+    background: var(--darkTheme);
+    color: var(--white);
     padding: 20px;
 }
 
@@ -349,6 +421,23 @@ footer
 
 @media screen and (max-width: 900px)
 {
+    .hamburger
+    {
+        display: flex;
+        margin-right: 0;
+    }
+
+    .navbar
+    {
+        flex-direction: column-reverse;
+    }
+
+    .navitem
+    {
+        flex-direction: column-reverse;
+        display: none;
+    }
+
     .sidebar
     {
         display: none;
@@ -369,4 +458,25 @@ footer
         height: 50vh;
     }
 
+}
+
+/* KLASY DODATKOWE ------------------ */
+.display
+{
+    display: flex;
+}
+/* KLASY DODATKOWE ------------------ */
+
+/* W trakcie
+@media (prefers-color-scheme: dark) {
+
+    body
+    {
+        color: rgba(255,255,255,0.8);
+    }
+    :root
+    {
+        --white: #202020;
+        --darkTheme: rgba(255,255,255,0.8);
+    }
 }
