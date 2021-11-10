@@ -111,26 +111,20 @@ img
     transition: color 0.2s;
 }
 
-.logo
-{
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-}
 
 .logo > h1
 {
     font-size: 90px;
-    text-align: center;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .logo > h1 > img
 {
     border-radius: 50%;
     margin-right: 20px;
-    display: inline;
 }
 
 .container
@@ -421,6 +415,11 @@ footer
 
 @media screen and (max-width: 900px)
 {
+    .logo > h1
+    {
+        font-size: 48px;
+    }
+
     .hamburger
     {
         display: flex;
@@ -440,7 +439,13 @@ footer
 
     .sidebar
     {
-        display: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    .container
+    {
+        flex-direction: column;
     }
 
     .article
@@ -458,6 +463,10 @@ footer
         height: 50vh;
     }
 
+    .ad
+    {
+        display: none;
+    }
 }
 
 /* KLASY DODATKOWE ------------------ */
