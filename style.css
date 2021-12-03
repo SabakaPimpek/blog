@@ -111,6 +111,10 @@ img
     transition: color 0.2s;
 }
 
+.logo
+{
+    display: flex;
+}
 
 .logo > h1
 {
@@ -415,9 +419,12 @@ footer
 
 @media screen and (max-width: 900px)
 {
+    .logo
+    {
+    }
     .logo > h1
     {
-        font-size: 48px;
+        font-size: 8vw; 
     }
 
     .hamburger
