@@ -15,15 +15,17 @@ img
 {
     --darkTheme: #202020;
     --white: #FFF;
+    --gray: gray;
+    --fontwhite: #fff;
 }
 
 .navbar
 {
     width: 100%;
     background: var(--darkTheme);
-    color: var(--white);
+    color: var(--fontwhite);
     display: flex;
-    border-top: 1px solid gray;
+    border-top: 1px solid var(--gray);
     justify-content: space-around;
 }
 
@@ -44,7 +46,7 @@ img
     width: 38px;
     height: 5px;
     border-radius: 2px;
-    background: var(--white);
+    background: var(--fontwhite);
     position: absolute;
     transition: background .5s ease-in-out;
 }
@@ -56,7 +58,7 @@ img
     width: 38px;
     height: 5px;
     border-radius: 2px;
-    background: var(--white);
+    background: var(--fontwhite);
     position: absolute;
     transition: transform .5s ease-in-out;
 }
@@ -101,13 +103,13 @@ img
 
 .button> a:hover
 {
-    color:gray;
+    color: var(--gray);
 }
 
 .button > a
 {
     text-decoration: none;
-    color: var(--white);
+    color: var(--fontwhite);
     transition: color 0.2s;
 }
 
@@ -170,7 +172,7 @@ article
 .articleheader > h2
 {
     font-size: 15px;
-    color: gray;
+    color: var(--gray);
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 400;
@@ -202,7 +204,7 @@ article
     justify-content: center;
     align-items: center;
     background: var(--darkTheme);
-    color: var(--white);
+    color: var(--fontwhite);
     width: 20%;
     margin: 0 auto;
     font-size: 20px;
@@ -214,7 +216,7 @@ article
 a
 {
     text-decoration: none;
-    color: black;
+    color: var(--darkTheme);
     transition: color 0.2s;
 }
 
@@ -227,19 +229,19 @@ article > section
 {
     display: flex;
     justify-content: space-between;
-    color: grey;
+    color: var(--gray);
     padding: 40px;
 }
 
 article > section > div > a
 {
-    color: grey;
+    color: var(--gray);
     transition: color 0.2s;
 }
 
 article > section > div > a:hover
 {
-    color: black;
+    color: var(--darkTheme);
 }
 
 /* ---------------------------------- Sidebar Section ------------------------------- */ 
@@ -259,7 +261,7 @@ article > section > div > a:hover
 .blackbar
 {
     display: flex;
-    color: var(--white);
+    color: var(--fontwhite);
     background: var(--darkTheme);
     height: 45px;
     justify-content: center;
@@ -285,7 +287,7 @@ article > section > div > a:hover
 
 .grid > a
 {
-    color:gray;
+    color:var(--gray);
 }
 
 .griditem
@@ -302,7 +304,7 @@ article > section > div > a:hover
 
 .griditem:hover 
 {
-    color: black;
+    color: var(--darkTheme);
 }
 
 .griditem > i
@@ -319,7 +321,6 @@ article > section > div > a:hover
     padding: 10px;
     border-bottom: 1px solid lightgray;
     font-size: 14px;
-    color: grey;
 }
 
 .newbar:last-child
@@ -341,7 +342,7 @@ article > section > div > a:hover
 {
     margin-top: 0;
     font-size: 17px;
-    color: black;
+    
 }
 
 .tile > ul
@@ -352,14 +353,19 @@ article > section > div > a:hover
 
 .tile > ul > a > li
 {
-    list-style-type: none;
+   list-style-type: none;
    padding: 10px 0 10px 20px;
    border-bottom: 1px solid lightgray;
 }
 
+.tile > ul > a
+{
+    color: var(--gray);
+}
+
 .tile > ul > a:hover
 {
-   color: gray;
+   color: var(--darkTheme);
 }
 
 .tile > ul > li:first-child
@@ -378,7 +384,7 @@ footer
 {
     text-align: center;
     background: var(--darkTheme);
-    color: var(--white);
+    color: var(--fontwhite);
     padding: 20px;
 }
 
@@ -440,7 +446,7 @@ footer
 
     .navitem
     {
-        flex-direction: column-reverse;
+        flex-direction: column;
         display: none;
     }
 
@@ -476,23 +482,27 @@ footer
     }
 }
 
-/* KLASY DODATKOWE ------------------ */
+/* KLASY DODATKOWE DO JS ------------------ */
 .display
 {
     display: flex;
 }
-/* KLASY DODATKOWE ------------------ */
+/* KLASY DODATKOWE DO JS ------------------ */
 
-/* W trakcie
+
 @media (prefers-color-scheme: dark) {
 
     body
     {
-        color: rgba(255,255,255,0.8);
+        color: white;
+        background: #202020;
     }
+
+   
     :root
     {
-        --white: #202020;
-        --darkTheme: rgba(255,255,255,0.8);
+        --white: #404040;
+        --darkTheme: #303030;
+        --gray: white;
     }
 }
